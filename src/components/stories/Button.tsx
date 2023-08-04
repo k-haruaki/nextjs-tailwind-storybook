@@ -34,19 +34,33 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
+  const baseButton = 'rounded-full font-bold'
+  const sizeMode =
+    size === 'small'
+      ? 'py-1.5 px-4 text-xs'
+      : size === 'medium'
+      ? 'py-2 px-5 text-sm'
+      : size === 'large'
+      ? 'py-3 px-6 text-base'
+      : ''
+  return primary ? (
+    <div>
+      <button
+        type="button"
+        className={`text-white bg-blue-450 ${baseButton} ${sizeMode}`}
+        {...props}
+      >
+        {label}
+      </button>
+    </div>
+  ) : (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={`text-gray-600 bg-transparent shadow-inner ${baseButton} ${sizeMode}`}
+      style={{ backgroundColor }}
       {...props}
     >
       {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
     </button>
-  );
+  )
 };
