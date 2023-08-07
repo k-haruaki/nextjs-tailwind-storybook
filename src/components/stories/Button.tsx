@@ -1,40 +1,34 @@
-import React from 'react'
-import './button.css'
+import React from 'react';
+import './button.css';
 
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean
+  primary?: boolean;
   /**
    * What background color to use
    */
-  backgroundColor?: string
+  backgroundColor?: string;
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large'
+  size?: 'small' | 'medium' | 'large';
   /**
    * Button contents
    */
-  label: string
+  label: string;
   /**
    * Optional click handler
    */
-  onClick?: () => void
+  onClick?: () => void;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const baseButton = 'rounded-full font-bold'
+export const Button = ({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) => {
+  const baseButton = 'rounded-full font-bold';
   const sizeMode =
     size === 'small'
       ? 'py-1.5 px-4 text-xs'
@@ -42,14 +36,10 @@ export const Button = ({
       ? 'py-2 px-5 text-sm'
       : size === 'large'
       ? 'py-3 px-6 text-base'
-      : ''
+      : '';
   return primary ? (
     <div>
-      <button
-        type="button"
-        className={`text-white bg-blue-450 ${baseButton} ${sizeMode}`}
-        {...props}
-      >
+      <button type="button" className={`text-white bg-blue-450 ${baseButton} ${sizeMode}`} {...props}>
         {label}
       </button>
     </div>
@@ -62,5 +52,5 @@ export const Button = ({
     >
       {label}
     </button>
-  )
-}
+  );
+};
