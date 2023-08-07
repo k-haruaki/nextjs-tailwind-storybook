@@ -9,13 +9,12 @@ module.exports = {
     extend: {
       colors: {
         blue: {
-          450: '#1EA7FD'
-        }
+          450: '#1EA7FD',
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
     fontFamily: {
