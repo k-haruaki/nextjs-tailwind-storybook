@@ -1,4 +1,6 @@
-.storybook-button {
+/* tailwind css を利用しているためこのファイルは削除してもよい */
+
+/* .storybook-button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
@@ -27,4 +29,4 @@
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
-}
+} */
