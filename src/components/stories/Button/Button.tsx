@@ -46,7 +46,7 @@ export const Button = ({ primary = false, size = 'medium', backgroundColor, labe
   ) : (
     <button
       type="button"
-      className={`text-gray-600 bg-transparent shadow-inner ${baseButton} ${sizeMode}`}
+      className={`text-light-body bg-transparent shadow-inner ${baseButton} ${sizeMode}`}
       style={{ backgroundColor }}
       {...props}
     >

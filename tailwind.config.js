@@ -1,18 +1,31 @@
-import colors from '/src/config/colors';
-
 /** @type {import('tailwindcss').Config} */
+
+const { resolve } = require('path');
+const pColorsPath = resolve(__dirname, 'src/config/primitiveColor.ts');
+const sColorsPath = resolve(__dirname, 'src/config/semanticColor.ts');
+const { primitiveColors } = require(pColorsPath);
+const { semanticColors } = require(sColorsPath);
+
 module.exports = {
   content: ['./src/components/**/*.{js,ts,jsx,tsx}', './src/app/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    colors: {
+      primitiveColors,
+    },
     extend: {
       colors: {
-        text: {
-          primary: {
-            DEFAULT: colors.white[1000],
-          },
-        },
-        blue: {
-          450: '#1EA7FD',
+        semanticColors,
+        // text: {
+        //   light: {
+        //     // body: colors.sumi[900],
+        //     450: '#1EA7FD',
+        //   },
+        // },
+        // blue: {
+        //   450: '#1EA7FD',
+        // },
+        red: {
+          100: '#ff00dd',
         },
       },
       backgroundImage: {
