@@ -4,7 +4,7 @@ import { Button } from '@/components/stories';
 const Home: React.FC = () => {
   return (
     <div>
-      <label>これはHome画面です。</label>
+      <label className="text-icon-light-label">これはHome画面です。</label>
       <br />
       <br />
 
@@ -13,6 +13,7 @@ const Home: React.FC = () => {
 
       {/* tailwind cssの設定が反映されているか確認用 */}
       <p className="text-3xl text-red-500 font-bold">Hello Tailwind</p>
+      <p className="text-3xl text-text-light-body font-bold">Hello Tailwind</p>
     </div>
   );
 };

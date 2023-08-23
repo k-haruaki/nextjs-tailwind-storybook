@@ -82,11 +82,4 @@ const sun = {
   50: '#FFE7E6',
 };
 
-export const colors = {
-  white: white,
-  sea: sea,
-  sumi: sumi,
-  forest: forest,
-  wood: wood,
-  sun: sun,
-};
+export { white, sea, sumi, forest, wood, sun };
