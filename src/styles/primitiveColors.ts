@@ -82,4 +82,13 @@ const sun = {
   50: '#FFE7E6',
 };
 
-export { white, sea, sumi, forest, wood, sun };
+const primitiveColors = {
+  white: white,
+  sea: sea,
+  sumi: sumi,
+  forest: forest,
+  wood: wood,
+  sun: sun,
+};
+
+export default primitiveColors;
